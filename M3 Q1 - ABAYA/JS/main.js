@@ -23,7 +23,7 @@ document.body.appendChild( renderer.domElement );
 
 //Creating the wall and adding the wall texture
 function createWall(){
-	const wallTexture = new THREE.TextureLoader().load("M3 Q1 - ABAYA\assets\textures\Wall.jpg");
+	const wallTexture = new THREE.TextureLoader().load("assets\textures\Wall.jpg");
 	const wallGeometry = new THREE.BoxGeometry(50, 25, 2.7);
 	const wallMaterial = new THREE.MeshLambertMaterial({map: wallTexture});
 	const wall = new THREE.Mesh(wallGeometry, wallMaterial);
@@ -47,7 +47,7 @@ function createRoom(){
 	room.add(leftWall);
 	
 	//Floor Texture
-	const floorTexture = new THREE.TextureLoader().load("M3 Q1 - ABAYA\assets\textures\Floor.jpg");
+	const floorTexture = new THREE.TextureLoader().load("assets\textures\Floor.jpg");
 	const floor = new THREE.Mesh( 
 		new THREE.PlaneGeometry( 50, 50, 1, 1 ), 
 		new THREE.MeshLambertMaterial( { map: floorTexture } ) 
@@ -70,7 +70,7 @@ scene.add(room);
 // Create chair
 function createChair(){
 
-	const textureChair = textureLoader.load("M3 Q1 - ABAYA/assets/textures/Leather.jpg");
+	const textureChair = textureLoader.load("assets/textures/Leather.jpg");
 	const chair = new THREE.Group();
 	const chairBack = new THREE.Mesh(
 		new THREE.BoxBufferGeometry (10, 13, 1),
